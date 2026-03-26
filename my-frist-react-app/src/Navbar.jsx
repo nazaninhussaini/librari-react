@@ -28,13 +28,14 @@ const Navbar = ()=>{
         justifyContent: "space-between",
         color:"white",
         marginBottom: "6px"
+        
         }}>
-            <h1>Me Appliction</h1>
+            <h1 className="text-4xl font-bold">Me Appliction</h1>
             <ul style={{ display : "flex",
         gap : "10px",
         alignItems : "center"}}>
                 {navList.map((item)=>(
-                    <li style={{listStyleType : "none"}} key={item.href}>
+                    <li className="text-2xl font-medium" style={{listStyleType : "none"}} key={item.href}>
                         <a style={{textDecoration : "none",
                             color:"white",
                         }} href={item.href}>{item.text}</a>

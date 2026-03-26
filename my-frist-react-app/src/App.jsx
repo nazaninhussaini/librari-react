@@ -5,8 +5,7 @@ function App(){
   return (
     <>
     <Navbar/>
-    <Hero/>
-    <h1>My First Appliction</h1>
+    <Hero text="My First Appliction" />
     </>
   )
 }
