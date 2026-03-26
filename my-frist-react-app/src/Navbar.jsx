@@ -1,17 +1,6 @@
+import Hero from "./Hero";
+
 const Navbar = ()=>{
-    const navStyle ={
-        with : "100%",
-        padding: "8px 12px",
-        backgroundImage: "liner-greadint (green,greenyellow)",
-        disply : "flex",
-        justifyContent: "space-between",
-        color: "with",
-    }
-    const ulStyle = {
-        disply : "flex",
-        gap : "10px",
-        alignItems : "center",
-    }
     const navList = [
         {
         text :"Home",
@@ -22,8 +11,8 @@ const Navbar = ()=>{
         href :"/about"
     },
         {
-        text :"Concat",
-        href :"/concat"
+        text :"Contact",
+        href :"/contact"
     },
         {
         text :"Services",
@@ -32,18 +21,28 @@ const Navbar = ()=>{
 ]
   
     return(
-        <nav style={navStyle}>
+        <nav style={{     width : "100%",
+        padding: "8px 12px",
+        backgroundColor: "green",
+        display : "flex",
+        justifyContent: "space-between",
+        color:"white",
+        marginBottom: "6px"
+        }}>
             <h1>Me Appliction</h1>
-            <ul style={ulStyle}>
+            <ul style={{ display : "flex",
+        gap : "10px",
+        alignItems : "center"}}>
                 {navList.map((item)=>(
                     <li style={{listStyleType : "none"}} key={item.href}>
                         <a style={{textDecoration : "none",
-                            color:"black",
+                            color:"white",
                         }} href={item.href}>{item.text}</a>
                     </li>
                 ))}
             </ul>
         </nav>
     )
+    
 } 
 export default Navbar;
