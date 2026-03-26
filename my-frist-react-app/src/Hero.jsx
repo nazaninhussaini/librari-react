@@ -1,3 +1,5 @@
+import First from "./First";
+
 const Hero = (props)=>{
     return(
         <>
@@ -9,5 +11,6 @@ const Hero = (props)=>{
        <h1 className="text-3xl text-green-600">My First code for tailwindcss</h1>
         </>
     )
+    
 }
 export default Hero;
