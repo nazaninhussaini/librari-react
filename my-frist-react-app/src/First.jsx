@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function First (){
-    const [Qimat,Natija]=useState(10);
+function Exampal (){
+
+    const [v,setV] = useState("")
     return(
-        <div className="flex justify-between p-16">
-        <button onClick={()=>Natija(Qimat + 1)} className="p-4 m-20 border " >Increment</button>
-        <h1>{Qimat}</h1>
-        <button onClick={()=>Natija(Qimat - 1)} className= "p-4 m-20 border ">decrement</button>
+        <div className="flex flex-col w-full justify-center gap-3">
+            <h1 className="text-2xl font-medium">{v}</h1>
+            <input value={v} onChange={(e)=>setV(e.target.value)}
+            className="border py-3 px-2 w-40 flex justify-center items-center "
+            type="text" />
         </div>
     )
 }
-export default First;
+export default Exampal;
