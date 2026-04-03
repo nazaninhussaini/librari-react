@@ -1,10 +1,9 @@
-import Hero from "./Hero";
 
 const Navbar = ()=>{
     const navList = [
         {
         text :"Home",
-        href :"/home"
+        href :"/"
     },
         {
         text :"About",
@@ -16,7 +15,7 @@ const Navbar = ()=>{
     },
         {
         text :"Services",
-        href :"/services"
+        href :"//services"
     },
 ]
   
