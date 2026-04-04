@@ -8,12 +8,11 @@ function App(){
     <>
     <Navbar/>
     
-    <Routers>
-      <Route path="/about" element={<About/>}></Route>
-      <Route path="/services" element={<Services/>}></Route>
-      <Route path="/contact" element={<Contact/>}></Route>
-    </Routers>
-    <h1>this is the home page</h1>
+   
+    <h1 className="text-5xl border bg-linear-60 from-green-500 via-gray-400 to-green-700
+    bg-clip-text text-transparent py-4 mx-auto w-fit 
+    ">this is the home page</h1>
+
     </>
   )
 }

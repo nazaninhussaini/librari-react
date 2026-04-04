@@ -15,7 +15,7 @@ const Navbar = ()=>{
     },
         {
         text :"Services",
-        href :"//services"
+        href :"/services"
     },
 ]
   
