@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom";
 
 const Navbar = ()=>{
     const navList = [
         {
         text :"Home",
-        href :"/"
+        link :"/"
     },
         {
         text :"About",
-        href :"/about"
+        link :"/about"
     },
         {
         text :"Contact",
-        href :"/contact"
+        link :"/contact"
     },
         {
         text :"Services",
-        href :"/services"
+        link :"/services"
     },
 ]
   
@@ -35,9 +36,9 @@ const Navbar = ()=>{
         alignItems : "center"}}>
                 {navList.map((item)=>(
                     <li className="text-2xl font-medium" style={{listStyleType : "none"}} key={item.href}>
-                        <a style={{textDecoration : "none",
+                        <Link style={{textDecoration : "none",
                             color:"white",
-                        }} href={item.href}>{item.text}</a>
+                        }} to={item.link}>{item.text}</Link>
                     </li>
                 ))}
             </ul>
