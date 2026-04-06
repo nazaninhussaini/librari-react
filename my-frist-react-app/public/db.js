@@ -28,3 +28,24 @@ export  const listStudents= [
         detalis: "Yasamin student for Programmin Acadimi Austad Sharifi ",    
     },
 ]
+
+export const SchoolList = [
+    {
+        id: 1,
+        name: "Austad Sharifi",
+        manager: "Esmatullah Golami ",
+        details: "this is a high school for male Students "
+    },
+    {
+        id: 2,
+        name: "Bi Bi Zahra",
+        manager: "Zohra Qurbani ",
+        details: "this is a high school for female Students "
+    },
+    {
+        id: 3,
+        name: "Hotqol Angori",
+        manager: "Shafiqa Haidari",
+        details: "this is a high school for female Students "
+    },
+]

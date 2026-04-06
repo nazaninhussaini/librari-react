@@ -7,13 +7,13 @@ const Student = ()=>{
         <div>
             <Navbar/>
             <ol>
-                {listStudents.map(person=>(
-                    <li key={person.id} id = "one">
-                    //  className="m-10 p-4 bg-linear-60 from-green-500 via-gray-400 to-green-700 
-                    // bg-clip-text text-transparen 
+                {listStudents.map((person)=>(
+                    <li key={person.id}
+                      className="m-10 p-4 bg-linear-60 from-green-500 via-gray-400 to-green-700 
+                     bg-clip-text text-transparen underline" >
                         <Link 
-                        // style = {{color:"green",textDecoration:"none",fontSize:"32px"}}
-                        to="">{person.name}</Link>
+                         style = {{color:"green",textDecoration:"none",fontSize:"32px"}}
+                        to={`/student ${person.name}`}>{person.name}</Link>
                     </li>
                 ))}
             </ol>
