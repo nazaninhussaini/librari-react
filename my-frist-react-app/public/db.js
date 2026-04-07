@@ -11,7 +11,7 @@ export  const listStudents= [
         name: "Masoda",
         score: 99,
         grade : "React",
-        detalis: "Masoda student for Programmin Acadimi Austad Sharifi ",    
+        detalis: "Masoda student for Austad Sharifi Programmin Acadimi  ",    
     },
     {
         id:3,
@@ -21,8 +21,8 @@ export  const listStudents= [
         detalis: "Raihan student for Programmin Acadimi Austad Sharifi ",    
     },
     {
-        id:1,
-        name: "Yasamin",
+        id:4,
+        name: "Yasamin",  
         score: 75,
         grade : "React",
         detalis: "Yasamin student for Programmin Acadimi Austad Sharifi ",    
