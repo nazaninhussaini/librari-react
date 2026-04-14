@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 
 function App(){
   const [weatherData,setWeatherData] = useState(null);
+  
   useEffect(()=>{
    async function getWeather(){
-    const data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Kabul&appid=684418efa9274f3ad6491868b0271123");
+    const data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Kabul&units=metric&appid=684418efa9274f3ad6491868b0271123");
     const javab = await data.json();
     setWeatherData(javab);
     }
@@ -29,6 +30,26 @@ function App(){
           weatherData.weather[0].main === "Rain" ? (<CloudRain size={42}/>):
           weatherData.weather[0].main === "Snow" ?(<Snowflake size={42}/>):
           weatherData.weather[0].main === "Fog" ? (<CloudFog size={42}/>):""}
+        </div>
+        <div style={{display:"flex",width:"100%",justifyContent:"space-between",alignItems:"center"}}> 
+          <p style={{display:"flex" , gap:"8px"}}>
+            <span>Tempreture</span>
+            <span>{weatherData.main.temp}°</span>
+          </p>
+          <p style={{display:"flex",gap:"8px"}}>
+            <span>Humidity</span>
+            <span>{weatherData.main.humidity}%</span>
+          </p>
+        </div>
+        <div style={{display:"flex",width:"100%",justifyContent:"space-between",alignItems:"center"}}>
+          <p>
+            <span>SunRise</span>
+            <span></span>
+          </p>
+          <p>
+            <span>SunSet</span>
+            <span></span>
+          </p>
         </div>
         </div>
 
