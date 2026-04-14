@@ -3,12 +3,38 @@ import { useEffect, useState } from "react";
 
 function App(){
   const [weatherData,setWeatherData] = useState(null);
-  
+  const [hour ,setHour] = useState(" ");
+  const [minute ,setMinute] = useState(" ");
+  const [seconds ,setSeconds] = useState(" ");
+
+  const [sunSetHour,setSunSetHour] = useState("");
+  const [sunSetMinute,setSunSetMinute] = useState("");
+  const [sunSetSeconds,setSunSetSeconds] = useState("");
+
+
   useEffect(()=>{
    async function getWeather(){
     const data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Kabul&units=metric&appid=684418efa9274f3ad6491868b0271123");
     const javab = await data.json();
     setWeatherData(javab);
+
+    // Sun rise data
+    const sunRiseDate = new Date(javab.sys.sunrise * 1000);
+    const sunRiseHour = sunRiseDate.getHours();
+    const sunRiseMinute = sunRiseDate.getMinutes();
+    const sunRiseSeconds = sunRiseDate.getSeconds();
+    setMinute(sunRiseMinute);
+    setSeconds(sunRiseSeconds);
+    setHour(sunRiseHour);
+    // sun set data
+       const sunSetDate = new Date(javab.sys.sunset * 1000);
+    const sunSetHour = sunSetDate.getHours();
+    const sunSetMinute = sunSetDate.getMinutes();
+    const sunSetSeconds = sunSetDate.getSeconds();
+    setSunSetHour(sunSetHour);
+    setSunSetMinute(sunSetMinute);
+    setSunSetSeconds(sunSetSeconds);
+
     }
     getWeather()
   },[]);
@@ -42,13 +68,13 @@ function App(){
           </p>
         </div>
         <div style={{display:"flex",width:"100%",justifyContent:"space-between",alignItems:"center"}}>
-          <p>
+          <p style={{display:"flex",gap:"8px"}}>
             <span>SunRise</span>
-            <span></span>
+            <span>{hour}:{minute}:{seconds}</span>
           </p>
-          <p>
+          <p style={{display:"flex",gap:"8px"}}>
             <span>SunSet</span>
-            <span></span>
+            <span>{sunSetHour}:{sunSetMinute}:{sunSetSeconds}</span>
           </p>
         </div>
         </div>
