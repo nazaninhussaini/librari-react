@@ -50,17 +50,17 @@ function App(){
   return(
     <div>
 
-      <div style={{width:"100%",height:"100vh",display:"flex",flexDirection:"column",gap:"10px" ,justifyContent:"center",alignItems:"center", backgroundColor:"gray"}}>
-      <div style={{width:"50%",display:"flex"}}>
+      <div style={{width:"100%",height:"100vh",display:"flex",flexDirection:"column",gap:"10px" ,justifyContent:"center",alignItems:"center"}}>
+      <div style={{width:"50%",display:"flex" ,gap:"5px"}}>
         <input type="text" style={{border:"1px solid black",width:"100%"}}
         value={cityName} onChange={(e)=>setCityName(e.target.value)}
         />
-        <button style={{padding:"6px 12px" ,backgroundColor:"blue",borderRadius:"5px", color:"white"}} 
+        <button style={{padding:"6px 12px" ,backgroundColor:"blue",borderRadius:"5px", color:"white",border:"none" }} 
         onClick={handelClick}
         >Search</button>
       </div>
         <div style={{width:"50%",height:"fit-content",padding:"20px",border:"1px solid black ",borderRadius:"5px",display:"flex",justifyContent:"center",alignItems:"center",boxShadow:"2px 2px 10px black"}}>
-          <div style={{width:"50%"}}>
+          <div>
           {weatherData.weather[0].main=== "Clear"?(<Sun size={42} style={{color:"yellow"}}/>):
           weatherData.weather[0].main === "Clousd"?(<Cloud size={42} />):
           weatherData.weather[0].main === "Thunderstorm"?(<CloudSun size={42}/>) :
@@ -69,6 +69,8 @@ function App(){
           weatherData.weather[0].main === "Snow" ?(<Snowflake size={42}/>):
           weatherData.weather[0].main === "Fog" ? (<CloudFog size={42}/>):""}
         </div>
+        <div style={{display:"flex",flexDirection:"column" , alignItems:"center", justifyContent:"center",gap:"10px",width:"100%" }}>
+          <h1 style={{textAlign:"center"}}>{cityName} Center</h1>
         <div style={{display:"flex",width:"100%",justifyContent:"space-between",alignItems:"center"}}> 
           <p style={{display:"flex" , gap:"8px"}}>
             <span>Tempreture</span>
@@ -88,6 +90,7 @@ function App(){
             <span>SunSet</span>
             <span>{sunSetHour}:{sunSetMinute}:{sunSetSeconds}</span>
           </p>
+        </div>
         </div>
         </div>
 
