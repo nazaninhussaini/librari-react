@@ -1,27 +1,31 @@
-import { useNavigate } from "react-router-dom";
-import About from "./About";
-import Contact from "./Contact";
-import Navbar from "./Navbar";
-import Services from "./Services";
+import { useRef, useState } from "react"
 
-function App(){
-  const navigate =  useNavigate()
-  function handleClick (){
-    navigate("/student")
-    navigate("/school")
+export default function App(){
+  const [v,setv] = useState(1);
+  const h1 = useRef(0)
+  function clickMe(){
+    setv(v + 1)
   }
-  return (
-    <>
-    <Navbar/>
-    
-   
-    <h1 className="text-5xl border bg-linear-60 from-green-500 via-gray-400 to-green-700
-    bg-clip-text text-transparent py-4 mx-auto w-fit 
-    ">this is the Home page</h1>
-    <button onClick={handleClick} className="text-3xl text-green-600 p-4 m-8">Go to Student page</button>
-    <button onClick={handleClick} className="text-3xl text-green-600 flex gap-5">Go to School page</button>
-
-    </>
-  )
+  function ClickNow(){
+    h1.current++
+  }
+  return(
+  <div>
+    <div 
+    className="w-full h-screen m-4 flex justify-center items-center flex-col "
+    >
+      <div className="flex gap-2.5">
+      <h1 className="text-3xl">{v}</h1>
+      <button onClick={clickMe}
+      className=" p-4 text-2xl font-medium bg-linear-90 rounded-sm from-orange-400 to-red-600 text-white"
+      >Add</button>
+      </div>
+      <div className="flex gap-2.5"> 
+        <h1 className="text-2xl">{h1.current}</h1>
+        <button 
+        className="p-2 text-2xl font-medium  bg-amber-500 text-white"
+       onClick={ClickNow}>Click me</button>
+      </div>
+    </div>
+  </div>)
 }
-export default App;
