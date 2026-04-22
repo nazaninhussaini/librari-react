@@ -1,19 +1,18 @@
-import { createContext, useState } from "react"
-import Details from"./Details"
-import Last from "./Last";
-export const LastContext =  createContext();
-export default function App(){
-  const [name,setName] = useState("Nazanin")
-  const LastName = "Hussaini"
-  return(
+import { createContext } from "react";
+import Home from "./Home";
+import { list } from "../db/student";
+export const StudentContext = createContext();
 
-    <div className="w-full h-screen flex items-center my-5 gap-4 flex-col">
-      <h1 className="text-3xl p-4 text-fuchsia-700">Hi This page for me Details! </h1>
-      <Details Myname= {name}/>
-      <LastContext.Provider value={LastName}>
-        <Last/>
-      </LastContext.Provider>
-      
+function App(){
+  const studentList = list;
+  return(
+    <div>
+      <h1 className="w-full flex justify-center text-4xl font-medium text-gray-600 ">Home...</h1>
+
+      <StudentContext.Provider value={studentList}>
+      <Home/> 
+      </StudentContext.Provider>
     </div>
   )
 }
+export default App;
