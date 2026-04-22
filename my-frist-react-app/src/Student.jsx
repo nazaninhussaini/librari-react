@@ -6,7 +6,7 @@ function Student (){
     return(
         <div className="w-full flex justify-center ">
             <div>
-                <h1 className="text-3xl font-medium border p-2 rounded-sm m-4 bg-gray-400 text-stone-100 ">list of all student</h1>
+                <h1 className="text-3xl font-medium border p-3 rounded-sm m-4 bg-gray-400 text-stone-100 ">list of all student</h1>
                 {list.length > 0 &&(
                 <div className="w-full grid gap-y-6">
                     {list.map(x=>(

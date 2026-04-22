@@ -7,7 +7,7 @@ function App(){
   const studentList = list;
   return(
     <div>
-      <h1 className="w-full flex justify-center text-4xl font-medium text-gray-600 ">Home...</h1>
+      <h1 className="w-full flex justify-center text-4xl font-medium text-gray-600 pt-3 ">Home...</h1>
 
       <StudentContext.Provider value={studentList}>
       <Home/> 
