@@ -15,7 +15,7 @@ function handelDelete(id){
             <h1 className="text-3xl font-normal" class = {todo.completed ? "cssText =  underline 3xl": "" }
             >todo : {todo.todo}</h1>
             <div className="w-full flex justify-between items-center mt-2 ">
-            <p className="text-xl font  ">date : {todo.date}</p>
+            <p className="text-xl font">date : {todo.date}</p>
             <div className="flex gap-2      ">
             <button onClick={()=> handelDelete(todo.id)}>
                 <Trash2 size={24}/>
