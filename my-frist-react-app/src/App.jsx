@@ -1,23 +1,20 @@
-import { createContext, useReducer } from "react";
-import A from "./component/A";
-
-export const DetaContext = createContext();
+import { useState } from "react";
+import Qustion2 from "./component/Qustion2";
+import Qustion3 from "./component/Qustion3";
+import Qustion4 from "./component/Qustion4";
 
 function App(){
-  function reduser (state,func){
-    if(func.type === "change"){
-       return state = func.payload;
-    }
-  }
-  const [value,func] = useReducer(reduser, ""); 
+  const [value,setValue] =  useState(0)
   return(
-    <div className="w-full text-3xl text-center p-4 bg-gray-300 h-screen ">
-      <h1 className="bg-linear-60 from-pink-400 to-purple-500 bg-clip-text text-transparent p-2">This is the app page</h1>
-      <h1 className="bg-linear-60 from-pink-400 to-purple-500 bg-clip-text text-transparent p-2">This is the input value : {value} </h1>
-      <DetaContext.Provider value={{value: value , setValue : func}}>
-        <A/>
-      </DetaContext.Provider>
+    <div className="w-full text-center text-2xl text-indigo-800 p-3">
+      <h1>سوال اول </h1>
+      <h1>{value}</h1>
+      <button  onClick={()=>setValue(value + 1)}>increament</button>
+      <Qustion2/>
+      <Qustion3/>
+      <Qustion4/>
     </div>
   )
+  
 }
 export default App;
