@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Qustion2 from "./component/Qustion2";
 import Qustion3 from "./component/Qustion3";
-import Qustion4 from "./component/Qustion4";
+import Qustion6 from "./component/Qustion6";
+import Qustion7 from "./component/Qustion7";
+import Qustion8 from "./component/Qustion8";
 
 function App(){
   const [value,setValue] =  useState(0)
@@ -12,8 +14,10 @@ function App(){
       <button  onClick={()=>setValue(value + 1)}>increament</button>
       <Qustion2/>
       <Qustion3/>
-      <Qustion4/>
-    </div>
+      <Qustion6/>
+      <Qustion7/>
+      <Qustion8/>
+          </div>
   )
   
 }
