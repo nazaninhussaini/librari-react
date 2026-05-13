@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { DetaContext } from "../App"
+import { DetaContext } from "../../App"
 
 export default function D(){
     const deta =  useContext(DetaContext);
