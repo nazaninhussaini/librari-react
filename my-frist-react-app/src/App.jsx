@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Qustion2 from "./component/Qustion2";
-import Qustion3 from "./component/Qustion3";
-import Qustion6 from "./component/Qustion6";
-import Qustion7 from "./component/Qustion7";
-import Qustion8 from "./component/Qustion8";
+import Qustion2 from "./component/useState/Qustion2";
+import Qustion3 from "./component/useState/Qustion3";
+import Qustion6 from "./component/useState/Qustion6";
+import Qustion7 from "./component/useState/Qustion7";
+import Qustion8 from "./component/useState/Qustion8";
+
 
 function App(){
   const [value,setValue] =  useState(0)
