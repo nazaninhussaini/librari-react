@@ -24,7 +24,7 @@ export default function Effect2 (){
     }
     return(
         <div>
-            <div className=" w-full flex justify-center bg-linear-60 from-blue-300 text-white via-gray-400 to-red-500">
+            <div className=" w-full flex justify-center shadow-2xl rounded-md shadow-red-300 mb-14 border-none bg-linear-60 from-blue-300 text-white via-gray-400 to-red-500">
                 <div className="border w-full px-4 py-3 flex flex-col gap-3 ">
                 <h1 className="text-center pb-3">Qustion 2</h1>
                 <div className="flex justify-center text-center gap-2 ">
