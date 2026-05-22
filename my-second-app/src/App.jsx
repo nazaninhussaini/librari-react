@@ -60,7 +60,7 @@ function App(){
         >Search</button>
       </div>
       {/* Icons for weather */}
-        <div style={{width:"50%",height:"fit-content",padding:"20px",border:"1px solid black ",borderRadius:"5px",display:"flex",justifyContent:"center",alignItems:"center",boxShadow:"2px 2px 10px black"}}>
+        <div style={{width:"50%",height:"fit-content",padding:"20px",border:"1px solid black ",borderRadius:"5px",display:"flex",justifyContent:"center",alignItems:"center",boxShadow:"2px 2px 10px black",backgroundColor:"gray" }}>
           <div>
           {weatherData.weather[0].main=== "Clear"?(<Sun size={42} style={{color:"yellow"}}/>):
           weatherData.weather[0].main === "Clousd"?(<Cloud size={42} />):
