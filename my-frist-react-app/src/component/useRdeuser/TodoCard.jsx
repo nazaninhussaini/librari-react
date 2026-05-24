@@ -1,8 +1,9 @@
-function toCard ({x}){
-return(
-    <div className="p-4 border rounded-md">
-        
-    </div>
-)
+export default function TodoCard({x}){
+    return(
+        <div className="p-4 border rounded-md">
+            <h1 className="text-3xl font-bold underline">{x}</h1>
+            
+        </div>
+    )
+    
 }
-export default toCard;
