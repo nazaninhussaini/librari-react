@@ -6,7 +6,7 @@ export default function Q3Rdeuser(){
     const [deta,myFunc]= useReducer(func , votes);
     return(
         <div>
-            <div className="w-full max-w-6xl mx-auto flex justify-center gap-7 my-2 text-stone-200 items-center">
+            <div className="w-full mx-auto flex justify-center gap-7 my-2 text-stone-200 items-center">
             <h1 className="text-3xl">{deta.agree}👍</h1>
             <h1 className="text-3xl">{deta.disagree}👎</h1>
             </div>

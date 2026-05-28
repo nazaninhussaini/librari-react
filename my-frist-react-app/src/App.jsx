@@ -5,7 +5,7 @@ import Q4Rdeuser from "./component/useRdeuser/Q4Rdeuser";
 
 function App(){
   return(
-    <div className=" mx-auto h-screen w-full bg-gray-500 text-center text-3xl p-3">
+    <div className=" mx-auto w-full bg-gray-500 text-center text-3xl p-3">
     {/* <Q1Rduser/> */}
     <Q2Rduser/>
     <Q3Rdeuser/>
