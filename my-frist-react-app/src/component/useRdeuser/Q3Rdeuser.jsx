@@ -6,9 +6,9 @@ export default function Q3Rdeuser(){
     const [deta,myFunc]= useReducer(func , votes);
     return(
         <div>
-            <div className="w-full max-w-4xl mx-auto flex justify-center gap-7 my-2 text-stone-200 items-center">
-            <h1 className="text-3xl">{deta.agree} <CheckSquare/> </h1>
-            <h1 className="text-3xl">{deta.disagree} <LucideSquareArrowOutDownLeft/> </h1>
+            <div className="w-full max-w-6xl mx-auto flex justify-center gap-7 my-2 text-stone-200 items-center">
+            <h1 className="text-3xl">{deta.agree}👍</h1>
+            <h1 className="text-3xl">{deta.disagree}👎</h1>
             </div>
             <div className="p-2 text-stone-200 flex gap-4 w-full mx-auto justify-center items-center my-2.5">
                 <button className="py-2 px-4 rounded-md shadow-2xl bg-linear-60 from-gray-500 to-taupe-300 "

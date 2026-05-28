@@ -1,6 +1,7 @@
 import Q1Rduser from "./component/useRdeuser/Q1Rduser";
 import Q2Rduser from "./component/useRdeuser/Q2Rdeuser";
 import Q3Rdeuser from "./component/useRdeuser/Q3Rdeuser";
+import Q4Rdeuser from "./component/useRdeuser/Q4Rdeuser";
 
 function App(){
   return(
@@ -8,6 +9,7 @@ function App(){
     {/* <Q1Rduser/> */}
     <Q2Rduser/>
     <Q3Rdeuser/>
+    <Q4Rdeuser/>
     </div>
   )
   
