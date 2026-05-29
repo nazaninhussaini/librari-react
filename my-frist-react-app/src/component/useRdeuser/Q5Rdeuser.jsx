@@ -1,3 +1,4 @@
+import { Type } from "lucide-react";
 import { useReducer, useState } from "react"
 
 const student =[
@@ -28,33 +29,34 @@ const student =[
 ]
 
 export default function Q5Rdeuser(){
-    const [name, setName]  = useState("");
-    const [lastName,setLastName] = useState("");
-    const [score,setScore] = useState(0);
+    // const [name, setName]  = useState("");
+    // const [lastName,setLastName] = useState("");
+    // const [score,setScore] = useState(0);
     const [deta,action]= useReducer(myFunction,student);
     return (
         <div className="w-full h-screen mx-auto ">
+            <h1>Q5 Rdeuser</h1>
             <input className="border py-3 px-2 focus:outline-0 rounded-md mx-2 my-5"
             placeholder="Entherd name student"
-            value={name} onChange={(e)=> setName(e.target.value)}
+            value={deta.name} onChange={(e)=> action({type:"name",payload:e.target.value})}
              type="text" />
             <input className="border py-3 px-2 focus:outline-0 rounded-md mx-2 my-5"
             placeholder="Entherd lastName student"
-            value={lastName} onChange={(e)=> setLastName(e.target.value)}
+            value={deta.lastName} onChange={(e)=> action({type:"lastName",payload:e.target.value})}
              type="text" />
             <input className="border py-3 px-2 focus:outline-0 rounded-md mx-2 my-5"
             placeholder="Enther Score studetnt"
-            value={score} onChange={(e)=> setScore (+e.target.value)}
+            value={deta.score} onChange={(e)=> action(+{type:"score",payload:e.target.value})}
              type="number" />
              <button className="border rounded-md py-3 px-4">Save</button>
 
             <div className="w-10/12 mx-auto grid grid-cols-2 gap-3">
-                {deta.map((x)=>(
+                { deta.map((x)=>(
                     <div key={x.id} className="py-2 px-3 flex border-white shadow-2xl rounded-md bg-gray-300 justify-center gap-3 flex-col">
                         <h1>{x.name}</h1>
                         <div className="flex justify-between items-center">
-                        <p>{x.lastName}</p>
-                        <p>{x.score}</p>
+                        <p>#{x.lastName}</p>
+                        <p>{x.score}%</p>
                         </div>
                     </div>
                 ))}
@@ -62,4 +64,15 @@ export default function Q5Rdeuser(){
         </div>
     )
 }
-function myFunction(deta,action){}
+function myFunction(deta , action){
+    switch(action.type){
+        case "name":
+            return {...deta, name: action.payload}
+            break;
+        case "lastName":
+            return{...deta, lastName: action.payload}
+            break;
+        default:
+            return{...deta,score: action.payload}
+    }
+}
