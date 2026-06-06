@@ -1,3 +1,4 @@
+import UseMemo from "./component/useMemo/UseMemo";
 import Q1Rduser from "./component/useRdeuser/Q1Rduser";
 import Q2Rduser from "./component/useRdeuser/Q2Rdeuser";
 import Q3Rdeuser from "./component/useRdeuser/Q3Rdeuser";
@@ -6,13 +7,13 @@ import Q5Rdeuser from "./component/useRdeuser/Q5Rdeuser";
 
 function App(){
   return(
-    <div className=" mx-auto w-full bg-gray-500 text-center text-3xl p-3">
+    <div>
     {/* <Q1Rduser/> */}
     {/* <Q2Rduser/>
     <Q3Rdeuser/>
     <Q4Rdeuser/>
-     */}
-     <Q5Rdeuser/>
+     <Q5Rdeuser/> */}
+     <UseMemo/>
     </div>
   )
   

@@ -17,7 +17,7 @@ const student =[
     {
         id:3,
         name:"Raihan",
-        lastName :"Amini",
+        lastName :"Razi",
         score: 88, 
     },
     {
@@ -33,6 +33,9 @@ export default function Q5Rdeuser(){
     // const [lastName,setLastName] = useState("");
     // const [score,setScore] = useState(0);
     const [deta,action]= useReducer(myFunction,student);
+    function handelClick(){
+        action({payload:{name:name , lastName:lastName,score : score}})
+    }
     return (
         <div className="w-full h-screen mx-auto ">
             <h1>Q5 Rdeuser</h1>
@@ -48,10 +51,12 @@ export default function Q5Rdeuser(){
             placeholder="Enther Score studetnt"
             value={deta.score} onChange={(e)=> action(+{type:"score",payload:e.target.value})}
              type="number" />
-             <button className="border rounded-md py-3 px-4">Save</button>
+             <button 
+             onClick={handelClick}
+             className="border rounded-md py-3 px-4">Save</button>
 
             <div className="w-10/12 mx-auto grid grid-cols-2 gap-3">
-                { deta.map((x)=>(
+                {deta.map((x)=>(
                     <div key={x.id} className="py-2 px-3 flex border-white shadow-2xl rounded-md bg-gray-300 justify-center gap-3 flex-col">
                         <h1>{x.name}</h1>
                         <div className="flex justify-between items-center">
@@ -67,7 +72,7 @@ export default function Q5Rdeuser(){
 function myFunction(deta , action){
     switch(action.type){
         case "name":
-            return {...deta, name: action.payload}
+            return [...deta, name , action.payload]
             break;
         case "lastName":
             return{...deta, lastName: action.payload}
