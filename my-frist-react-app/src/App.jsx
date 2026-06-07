@@ -1,4 +1,5 @@
 import UseMemo from "./component/useMemo/UseMemo";
+import UseMemoEx1 from "./component/useMemo/UsememoEx1";
 import Q1Rduser from "./component/useRdeuser/Q1Rduser";
 import Q2Rduser from "./component/useRdeuser/Q2Rdeuser";
 import Q3Rdeuser from "./component/useRdeuser/Q3Rdeuser";
@@ -14,6 +15,7 @@ function App(){
     <Q4Rdeuser/>
      <Q5Rdeuser/> */}
      <UseMemo/>
+     <UseMemoEx1/>
     </div>
   )
   

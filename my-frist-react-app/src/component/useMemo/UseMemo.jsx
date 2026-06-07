@@ -14,7 +14,7 @@ export default function UseMemo(){
             <h1 className="text-center font-bold text-2xl">{myText}</h1>
             <button 
             className="border py-3 px-2 rounded-bl-md rounded-tr-md my-2"
-            onClick={()=> setIsDark(!isDark)}>Toggel Them</button>
+            onClick={()=> setIsDark(!isDark)}>Toggel Theme</button>
         </div>
     )
 }
